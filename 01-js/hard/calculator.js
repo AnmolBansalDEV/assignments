@@ -16,6 +16,40 @@
   Once you've implemented the logic, test your code by running
 */
 
-class Calculator {}
+class Calculator {
+  constructor(){
+    this.result = 0
+  }
+  add (number) {
+    this.result += number
+  }
+  subtract (number) {
+    this.result -= number
+  }
+  multiply (number) {
+    this.result *= number
+  }
+  divide (number) {
+    if(!(number !== 0 && typeof number === 'number')){
+      throw new Error('invalid divisor')
+    }
+    this.result /= number
+  }
+  clear(){
+    this.result = 0
+  }
+  getResult() {
+    return this.result
+  }
+  calculate(expression){
+    const removedSpace = expression.replace(/\s+/g, '')
+    const res = eval(removedSpace)
+    if (res === Infinity) {
+      throw new Error('invalid divisor')
+    } else {
+      this.result = res
+    }
+  }
+}
 
 module.exports = Calculator;

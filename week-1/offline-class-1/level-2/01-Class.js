@@ -10,3 +10,6 @@ class Animal {
 }
 
 
+const dog = new Animal('sally', 4)
+
+console.log(dog.describe())

@@ -48,7 +48,7 @@ function concatExample(arr1, arr2) {
   let arr3 = arr1.concat(arr2);
   console.log("After concat:", arr3);
 }
-concatExample([1, 2, 3], [4, 5, 6]);
+concatExample([1, 2, 3], [3, 5, 6]);
 
 // forEach()
 function forEachExample(arr) {
